@@ -227,11 +227,11 @@ var styleVariants$2 = (_b$3 = {},
     _b$3);
 
 var getDisabledStyles = function (_a) {
-    var $isLoading = _a.$isLoading, theme = _a.theme;
+    var $isLoading = _a.$isLoading; _a.theme;
     if ($isLoading === true) {
         return "\n      &:disabled,\n      &.pancake-button--disabled {\n        cursor: not-allowed;\n      }\n    ";
     }
-    return "\n    &:disabled,\n    &.pancake-button--disabled {\n      background-color: " + theme.colors.backgroundDisabled + ";\n      border-color: " + theme.colors.backgroundDisabled + ";\n      box-shadow: none;\n      color: " + theme.colors.textDisabled + ";\n      cursor: not-allowed;\n    }\n  ";
+    return "\n    &:disabled,\n    &.pancake-button--disabled {\n      box-shadow: none;\n      opacity: 0.5;\n      cursor: not-allowed;\n    }\n  ";
 };
 /**
  * This is to get around an issue where if you use a Link component
@@ -595,7 +595,7 @@ var Icon$1f = function (props) {
 };
 
 var Icon$1e = function (props) {
-    return (React__default['default'].createElement("img", { src: "/logo.png", height: "32px" }));
+    return (React__default['default'].createElement("img", { src: "/logo.png" }));
 };
 
 var Icon$1d = function (props) {
@@ -4511,7 +4511,7 @@ var WalletWrapper = styled__default['default'](Box)(templateObject_1$2 || (templ
     var theme = _a.theme;
     return theme.colors.cardBorder;
 });
-var StyledModalHeader = styled__default['default'](ModalHeader)(templateObject_2$1 || (templateObject_2$1 = __makeTemplateObject(["\n  background: ", ";\n  padding: 0px 24px;\n"], ["\n  background: ", ";\n  padding: 0px 24px;\n"
+var StyledModalHeader = styled__default['default'](ModalHeader)(templateObject_2$1 || (templateObject_2$1 = __makeTemplateObject(["\n  background: ", ";\n  padding: 4px 24px;\n"], ["\n  background: ", ";\n  padding: 4px 24px;\n"
     /**
      * Checks local storage if we have saved the last wallet the user connected with
      * If we find something we put it at the top of the list
@@ -4551,7 +4551,7 @@ var ConnectModal = function (_a) {
     return (React__default['default'].createElement(ModalContainer, { minWidth: "320px" },
         React__default['default'].createElement(StyledModalHeader, null,
             React__default['default'].createElement(ModalTitle, null,
-                React__default['default'].createElement(Text, { fontSize: "16px" }, "Connect Wallet")),
+                React__default['default'].createElement(Text, { fontSize: "16px" }, "CONNECT WALLET")),
             React__default['default'].createElement(ModalCloseButton, { onDismiss: onDismiss })),
         React__default['default'].createElement(ModalBody, { width: ["320px", null, "340px"] },
             React__default['default'].createElement(WalletWrapper, { maxHeight: "453px", overflowY: "auto" },

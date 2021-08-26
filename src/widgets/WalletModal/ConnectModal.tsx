@@ -24,7 +24,7 @@ const WalletWrapper = styled(Box)`
 
 const StyledModalHeader = styled(ModalHeader)`
   background: ${({ theme }) => theme.colors.background};
-  padding: 0px 24px;
+  padding: 4px 24px;
 `
 
 /**
@@ -63,7 +63,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
     <ModalContainer minWidth="320px">
       <StyledModalHeader>
         <ModalTitle>
-          <Text fontSize="16px">Connect Wallet</Text> 
+          <Text fontSize="16px">CONNECT WALLET</Text> 
         </ModalTitle>
         <ModalCloseButton onDismiss={onDismiss} />
       </StyledModalHeader>
